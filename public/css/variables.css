@@ -1,0 +1,8 @@
+:root {
+  --bg-color-light: #eee;
+  --bg-color-dark: blue;
+  /*--bg-color-dark: #484848;*/
+
+  --text-color-light: #eee;
+  --text-color-dark: #484848;
+}
