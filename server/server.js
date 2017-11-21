@@ -13,6 +13,22 @@ app.get('/', (req, res) => {
   res.render('home.hbs');
 });
 
+app.get('*', (req, res, next) => {
+  const err = new Error();
+  err.status = 404;
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  if (err.status !== 404) {
+    return next(err);
+  }
+
+  return res.render('error.hbs', {
+    message: '404: Sorry, that page doesn\'t exist.',
+  });
+});
+
 app.listen(port, () => {
   console.log(`Started on port ${port}`);
 });
