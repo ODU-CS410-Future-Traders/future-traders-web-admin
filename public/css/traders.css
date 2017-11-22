@@ -1,0 +1,15 @@
+h1 {
+  font-size: 100px;
+}
+
+.traders {
+  text-align: center;
+}
+
+.traders-display {
+}
+
+.btn-default {
+  width: 120px;
+  margin: 20px;
+}

@@ -10,6 +10,10 @@ app.set('view engine', 'hbs')
   .use(express.static(path.join(`${__dirname}/../public`)));
 
 app.get('/', (req, res) => {
+  res.render('traders.hbs');
+});
+
+app.get('/admin/home', (req, res) => {
   res.render('home.hbs');
 });
 
